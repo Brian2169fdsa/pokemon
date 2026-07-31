@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#031928" />
+    <title>Card Lab — Ten Play Poker</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800;900&family=Rajdhani:wght@600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="machine" aria-label="Card Lab ten-play educational poker machine">
+      <header class="top-row">
+        <section class="brand-panel chrome-panel">
+          <div class="brand-bolt" aria-hidden="true">ϟ</div>
+          <h1>CARD<span>LAB</span></h1>
+          <b>COLLECTOR CARD GAME</b>
+          <h2>PRISM RIFT<br /><strong>ASCENDED</strong></h2>
+          <div class="mascot" aria-hidden="true">✦</div>
+        </section>
+
+        <section class="paytable chrome-panel" aria-label="Poker pay table">
+          <div class="pay-head"><i></i><b>1 PLAY</b><b>2 PLAY</b><b>3 PLAY</b><b>4 PLAY</b><b>5 PLAY</b><b>10 PLAY</b></div>
+          <div id="pay-rows"></div>
+        </section>
+
+        <section class="promo-panel chrome-panel">
+          <small>UP TO</small>
+          <strong>10 PLAY</strong>
+          <h2>MULTI-DENOM</h2>
+          <div class="promo-burst" aria-hidden="true">⚡</div>
+          <b>LEARN • COLLECT • PLAY</b>
+        </section>
+      </header>
+
+      <section class="game-grid chrome-panel" id="hands" aria-label="Ten poker hands"></section>
+
+      <section class="status-strip" aria-live="polite">
+        <div class="meter"><small>WIN</small><strong id="win">0</strong></div>
+        <div class="meter"><small>BET</small><strong id="bet">50</strong></div>
+        <p id="message">CHOOSE YOUR BET THEN PRESS DEAL</p>
+        <div class="meter credit"><small>CREDIT</small><strong id="credit">$100.00</strong></div>
+      </section>
+
+      <footer class="controls">
+        <button class="cab-button gold" id="help">SEE PAYS/<br />HELP</button>
+        <button class="cab-button purple" id="games">MORE GAMES</button>
+        <fieldset class="denom">
+          <legend>DENOMINATION</legend>
+          <button data-denom="1">1¢</button><button data-denom="5">5¢</button><button class="selected" data-denom="10">10¢</button><button data-denom="25">25¢</button><button data-denom="100">$1</button>
+        </fieldset>
+        <button class="cab-button purple" id="bet-hand">BET PER<br />HAND</button>
+        <button class="cab-button purple" id="max-bet">MAX<br />BET</button>
+        <button class="cab-button gold deal" id="deal">DEAL</button>
+      </footer>
+    </main>
+
+    <dialog id="help-dialog">
+      <button class="close" aria-label="Close help">×</button>
+      <span>FIELD GUIDE</span><h2>Jacks or Better</h2>
+      <p>Choose a denomination and bet per hand, then press <b>Deal</b>. Ten hands are dealt at once. Pairs of Jacks or higher qualify for a play-credit award.</p>
+      <div class="guide"><b>⚡ VOLT</b><b>🔥 EMBER</b><b>💧 TIDE</b><b>🌿 GROVE</b><b>🔮 MYSTIC</b></div>
+      <small>Educational demo only. No purchases, prizes, cash-out, or real-money wagering.</small>
+    </dialog>
+    <script src="app.js"></script>
+  </body>
+</html>
